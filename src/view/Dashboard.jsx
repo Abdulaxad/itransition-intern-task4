@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 export default function Dashboard() {
     const [baza, setBaza] = useState([])
@@ -31,6 +32,15 @@ export default function Dashboard() {
 
   return (
     <div className='container'>
+                <nav class="navbar navbar-expand-lg navbar-light bg-secondary ">
+                    <h3 class="navbar-brand mx-3 text-light disabled"  href="#">Task4</h3>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <Link to="/">
+                        <button className='btn btn-warning'>Logout</button>
+                    </Link>
+                    </nav>
         <div className="table-responsive">
         <table className="table table-striped">
             <thead>
